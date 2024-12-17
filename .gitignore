@@ -1,0 +1,5 @@
+# System-Modules 
+node_modules
+
+# Secret Keys 
+.env
