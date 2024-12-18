@@ -1,0 +1,171 @@
+
+[2024-12-18T11:59:59.913Z] AI Text Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:221:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:11:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T12:05:50.067Z] Structured AI Response
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:221:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:11:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T12:05:50.067Z] Structured AI Response Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:221:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:11:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T12:10:59.354Z] Weather forecast for Mumbai
+Error: Coordinates not found for destination: Mumbai
+Error: Coordinates not found for destination: Mumbai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T12:12:10.296Z] Weather forecast for Mumbai
+Error: Coordinates not found for destination: Mumbai
+Error: Coordinates not found for destination: Mumbai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T15:28:41.843Z] AI Text Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T15:29:34.734Z] Structured AI Response
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T15:29:34.734Z] Structured AI Response Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T15:34:39.061Z] Weather forecast for Mumbai
+Error: Coordinates not found for destination: Mumbai
+Error: Coordinates not found for destination: Mumbai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T16:06:26.260Z] Weather forecast for Mumbai
+Error: Coordinates not found for destination: Mumbai
+Error: Coordinates not found for destination: Mumbai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T16:06:28.694Z] Weather forecast for Mumbai
+Error: Coordinates not found for destination: Mumbai
+Error: Coordinates not found for destination: Mumbai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T16:06:45.743Z] Weather forecast for Chennai
+Error: Coordinates not found for destination: Chennai
+Error: Coordinates not found for destination: Chennai
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:64:13)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\langhchain-application\server\src\services\WeatherService.ts:4:12)
+    at WeatherService.getCoordinates (D:\langhchain-application\server\src\services\WeatherService.ts:48:16)
+    at WeatherService.<anonymous> (D:\langhchain-application\server\src\services\WeatherService.ts:30:50)
+    at Generator.next (<anonymous>)
+    at D:\langhchain-application\server\src\services\WeatherService.ts:8:71
+    at new Promise (<anonymous>)
+-----------------------------------
+
+[2024-12-18T17:19:31.254Z] AI Text Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T17:23:08.438Z] AI Text Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------
+
+[2024-12-18T17:25:24.410Z] AI Text Generation
+Error: Failed to generate text with any available model
+Error: Failed to generate text with any available model
+    at AIModelService.<anonymous> (D:\langhchain-application\server\src\services\AIModelService.ts:77:11)
+    at Generator.throw (<anonymous>)
+    at rejected (D:\langhchain-application\server\src\services\AIModelService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+-----------------------------------

@@ -65,15 +65,13 @@ export class TravelRecommendationService {
     destination: Destination,
     interests: string[]
   ): boolean {
-    // Placeholder logic - in real-world, this would be more sophisticated
     const destinationInterests = [
-      "technology",
+      "landmark",
       "culture",
       "food",
       "history",
       "nature",
     ];
-
     return interests.some((interest) =>
       destinationInterests.includes(interest.toLowerCase())
     );
@@ -105,9 +103,13 @@ export class TravelRecommendationService {
     attractionId: number
   ): Promise<Attraction | null> {
     try {
-      // Fetch detailed information about a specific attraction
-      // In a real-world scenario, this might involve additional API calls or data enrichment
-      return null; // Placeholder
+      const attraction = await AttractionModel.findById(attractionId);
+
+      if (!attraction) {
+        return null; // If attraction doesn't exist
+      }
+
+      return attraction; // Return the found attraction
     } catch (error) {
       ErrorHandler.handle(error, `Attraction Details for ID ${attractionId}`);
       return null;

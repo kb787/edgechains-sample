@@ -36,7 +36,7 @@ export class AttractionModel {
     destinationId: number,
     interests?: string[]
   ): Promise<Attraction[]> {
-    let query = "SELECT * FROM attractions WHERE destination_id = $1";
+    let query = `SELECT * FROM attractions WHERE destination_id = ${destinationId}`;
     const params: any[] = [destinationId];
 
     if (interests && interests.length > 0) {
@@ -46,5 +46,13 @@ export class AttractionModel {
 
     const result = await db.query(query, params);
     return result.rows;
+  }
+  static async findById(attractionId: number): Promise<Attraction | null> {
+    const query = `SELECT * FROM attractions WHERE id = ${attractionId}`;
+    const values = [attractionId];
+
+    const result = await db.query(query, values);
+
+    return result.rows.length > 0 ? result.rows[0] : null;
   }
 }
