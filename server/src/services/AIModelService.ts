@@ -10,6 +10,12 @@ export interface GenerationOptions {
   temperature?: number;
 }
 
+const DEFAULT_MODELS = {
+  openai: "gpt-3.5-turbo",
+  groq: "llama2-70b-4096",
+  google: "gemini-pro",
+} as const;
+
 export class AIModelService {
   private clients: {
     openai?: OpenAI;
@@ -20,7 +26,11 @@ export class AIModelService {
 
   constructor() {
     const config = ConfigLoader.loadConfig();
-    this.modelConfigs = config.aiModels;
+    // Ensure all required properties are present and add default model if missing
+    this.modelConfigs = config.aiModels.map((config) => ({
+      ...config,
+      // model: config.model || DEFAULT_MODELS[config.provider]
+    })) as IModelConfig[];
     this.initializeClients();
   }
 
@@ -48,7 +58,7 @@ export class AIModelService {
       throw new Error("No AI model configurations available");
     }
 
-    const sortedModels = this.modelConfigs.sort(
+    const sortedModels = [...this.modelConfigs].sort(
       (a, b) => a.fallbackPriority - b.fallbackPriority
     );
 
@@ -73,15 +83,16 @@ export class AIModelService {
   ): Promise<string> {
     switch (modelConfig.provider) {
       case "openai":
-        return this.generateOpenAIText(options);
+        return this.generateOpenAIText(modelConfig, options);
       case "groq":
-        return this.generateGroqText(options);
+        return this.generateGroqText(modelConfig, options);
       default:
         throw new Error(`Unsupported AI provider: ${modelConfig.provider}`);
     }
   }
 
   private async generateOpenAIText(
+    modelConfig: IModelConfig,
     options: GenerationOptions
   ): Promise<string> {
     if (!this.clients.openai) {
@@ -89,7 +100,7 @@ export class AIModelService {
     }
 
     const response = await this.clients.openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: modelConfig.model || DEFAULT_MODELS.openai,
       messages: [{ role: "user", content: options.prompt }],
       max_tokens: options.maxTokens || 500,
       temperature: options.temperature || 0.7,
@@ -98,13 +109,16 @@ export class AIModelService {
     return response.choices[0].message.content || "";
   }
 
-  private async generateGroqText(options: GenerationOptions): Promise<string> {
+  private async generateGroqText(
+    modelConfig: IModelConfig,
+    options: GenerationOptions
+  ): Promise<string> {
     if (!this.clients.groq) {
       throw new Error("Groq client not initialized");
     }
 
     const response = await this.clients.groq.chat.completions.create({
-      model: "llama2-70b-4096",
+      model: modelConfig.model || DEFAULT_MODELS.groq,
       messages: [{ role: "user", content: options.prompt }],
       max_tokens: options.maxTokens || 500,
       temperature: options.temperature || 0.7,
